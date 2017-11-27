@@ -14,13 +14,7 @@ namespace SocialNetwork.Controllers
 {
     public class HomeController : Controller
     {
-        private IUserService UserService
-        {
-            get
-            {
-                return HttpContext.GetOwinContext().GetUserManager<IUserService>();
-            }
-        }
+        private IUserService UserService => HttpContext.GetOwinContext().GetUserManager<IUserService>();
 
         public ActionResult Index()
         {

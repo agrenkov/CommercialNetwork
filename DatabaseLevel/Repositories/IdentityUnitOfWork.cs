@@ -26,20 +26,11 @@ namespace DatabaseLevel.Repositories
             clientManager = new ClientManager(db);
         }
 
-        public ApplicationUserManager UserManager
-        {
-            get { return userManager; }
-        }
+        public ApplicationUserManager UserManager => userManager;
 
-        public IClientManager ClientManager
-        {
-            get { return clientManager; }
-        }
+        public IClientManager ClientManager => clientManager;
 
-        public ApplicationRoleManager RoleManager
-        {
-            get { return roleManager; }
-        }
+        public ApplicationRoleManager RoleManager => roleManager;
 
         public async Task SaveAsync()
         {

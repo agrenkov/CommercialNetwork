@@ -23,6 +23,11 @@ namespace SocialNetwork.Controllers
             return View();
         }
 
+        public ActionResult Chat()
+        {
+            return View();
+        }
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginModel model)
@@ -43,7 +48,7 @@ namespace SocialNetwork.Controllers
                     {
                         IsPersistent = true
                     }, claim);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Chat", "Account");
                 }
             }
             return View(model);
@@ -96,5 +101,7 @@ namespace SocialNetwork.Controllers
                 Role = "admin",
             }, new List<string> { "user", "admin" });
         }
+
+
     }
 }

@@ -5,9 +5,10 @@ using System.Web;
 
 namespace SocialNetwork.Models
 {
-    public class DialogModel
+    public class CurrentUserInfo
     {
         public string Name { get; set; }
-        public string Message { get; set; }
+        public string IdentityId { get; set; }
+        public int Id { get; set; }
     }
 }
